@@ -1,13 +1,294 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#00ff7a" />
+  <meta name="description" content="Veronika — school student 3D artist. Blender, Tinkercad, Photoshop, Trellis, Clipchamp." />
+  <title>Veronika 3D Artist</title>
 
-    hello I'm Veronika
-    
+  <!-- IMPORTANT:
+    Put these 3 files in the SAME folder:
+    index.html
+    styles.css
+    script.js
+  -->
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="./script.js" defer></script>
+</head>
+
+<body>
+  <header class="header" id="top">
+    <a class="skip-link" href="#about">Skip to content</a>
+
+    <div class="container header__inner">
+      <a class="brand" href="#top" aria-label="Go to top">
+        <span class="brand__mark" aria-hidden="true">⟡</span>
+        <span class="brand__text">
+          <span class="brand__name">Veronika</span>
+          <span class="brand__role">3D Artist</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu">
+          <span class="nav__toggle-line" aria-hidden="true"></span>
+          <span class="nav__toggle-line" aria-hidden="true"></span>
+          <span class="nav__toggle-line" aria-hidden="true"></span>
+        </button>
+
+        <ul class="nav__list" id="navMenu">
+          <li class="nav__item"><a class="nav__link" href="#about">About</a></li>
+          <li class="nav__item"><a class="nav__link" href="#skills">Skills</a></li>
+          <li class="nav__item"><a class="nav__link" href="#projects">Projects</a></li>
+          <li class="nav__item"><a class="nav__link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <!-- We add "visible" so content is not hidden if JS fails to load -->
+    <section class="hero reveal visible" aria-labelledby="heroTitle">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="badge" aria-label="Focus tags">
+            <span class="badge__dot" aria-hidden="true"></span>
+            3D Modeling • AI Basics • Tech Creativity
+          </p>
+
+          <h1 class="hero__title" id="heroTitle">
+            Hi, I’m <span class="accent">Veronika</span> — a school student who loves 3D modeling.
+          </h1>
+
+          <p class="hero__text">
+            I make clean 3D models, learn neural networks, and build creative projects.
+            I can also deploy <span class="accent">Trellis</span> to generate 3D models from images.
+          </p>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#projects">See Projects</a>
+            <a class="btn btn--ghost" href="mailto:shlenskaveronika@gmail.com?subject=Hi%20Veronika!">Write to me</a>
+          </div>
+
+          <div class="hero__stats" aria-label="Quick highlights">
+            <div class="stat">
+              <div class="stat__value">3D</div>
+              <div class="stat__label">Modeling</div>
+            </div>
+            <div class="stat">
+              <div class="stat__value">AI</div>
+              <div class="stat__label">Basics</div>
+            </div>
+            <div class="stat">
+              <div class="stat__value">Tech</div>
+              <div class="stat__label">Creative</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__visual" aria-hidden="true">
+          <div class="holo-card">
+            <div class="holo-card__grid"></div>
+            <div class="holo-card__content">
+              <div class="holo-card__title">Veronika_3D.exe</div>
+              <div class="holo-card__line">Status: <span class="accent">Online</span></div>
+              <div class="holo-card__line">Tools: Blender / Tinkercad / Photoshop</div>
+              <div class="holo-card__line">AI: Trellis (image → 3D)</div>
+              <div class="holo-card__line">Mood: Creative ⚡</div>
+            </div>
+            <div class="holo-card__glow"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal visible" id="about" aria-labelledby="aboutTitle">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title" id="aboutTitle">About</h2>
+          <p class="section__subtitle">Who I am and what I like to create.</p>
+        </div>
+
+        <div class="about">
+          <div class="about__panel">
+            <h3 class="about__title">School student • 3D artist • AI curious</h3>
+            <p class="about__text">
+              I’m Veronika. I’m still studying at school, and I’m passionate about 3D modeling, creativity,
+              and new tech. I like futuristic shapes, clean renders, and simple but stylish design.
+            </p>
+            <p class="about__text">
+              I also explore AI tools and can deploy <span class="accent">Trellis</span> to generate 3D models from an image.
+            </p>
+
+            <div class="about__tags" aria-label="Interests">
+              <span class="chip">3D Modeling</span>
+              <span class="chip">AI Basics</span>
+              <span class="chip">Cyber / Tech</span>
+              <span class="chip">Video</span>
+            </div>
+          </div>
+
+          <div class="about__panel about__panel--outline">
+            <h3 class="about__title">What I do</h3>
+            <ul class="list">
+              <li class="list__item">3D models for learning and personal projects</li>
+              <li class="list__item">Simple textures and image editing</li>
+              <li class="list__item">AI experiments: image → 3D generation</li>
+              <li class="list__item">Creative videos in Clipchamp</li>
+            </ul>
+            <a class="link" href="#contact">Let’s connect →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal visible" id="skills" aria-labelledby="skillsTitle">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title" id="skillsTitle">Skills</h2>
+          <p class="section__subtitle">Tools I use (and keep improving).</p>
+        </div>
+
+        <div class="grid grid--skills" role="list">
+          <article class="card" role="listitem">
+            <h3 class="card__title">Blender</h3>
+            <p class="card__text">Modeling, simple materials, basic renders.</p>
+          </article>
+
+          <article class="card" role="listitem">
+            <h3 class="card__title">Tinkercad</h3>
+            <p class="card__text">Quick shapes, prototypes, clean geometry.</p>
+          </article>
+
+          <article class="card" role="listitem">
+            <h3 class="card__title">Paint 3D</h3>
+            <p class="card__text">Fast edits and simple 3D experiments.</p>
+          </article>
+
+          <article class="card" role="listitem">
+            <h3 class="card__title">Photoshop</h3>
+            <p class="card__text">Textures, mockups, and image prep.</p>
+          </article>
+
+          <article class="card" role="listitem">
+            <h3 class="card__title">Trellis</h3>
+            <p class="card__text">Deploy + generate 3D models from images.</p>
+          </article>
+
+          <article class="card" role="listitem">
+            <h3 class="card__title">Clipchamp</h3>
+            <p class="card__text">Creative video projects and edits.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal visible" id="projects" aria-labelledby="projectsTitle">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title" id="projectsTitle">Projects</h2>
+          <p class="section__subtitle">Placeholders for my work (images can be added later).</p>
+        </div>
+
+        <div class="grid grid--projects">
+          <article class="project-card">
+            <div class="project-card__top">
+              <h3 class="project-card__title">Cyber Prop Pack</h3>
+              <p class="project-card__meta">3D modeling • Blender</p>
+            </div>
+            <p class="project-card__text">
+              A small set of futuristic props with neon details and clean geometry.
+            </p>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card__top">
+              <h3 class="project-card__title">Image → 3D Tests</h3>
+              <p class="project-card__meta">AI • Trellis</p>
+            </div>
+            <p class="project-card__text">
+              Deploying Trellis and testing generation of simple 3D models from pictures.
+            </p>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card__top">
+              <h3 class="project-card__title">School 3D Mini Builds</h3>
+              <p class="project-card__meta">Tinkercad • Paint 3D</p>
+            </div>
+            <p class="project-card__text">
+              Quick learning models: parts, shapes, small scenes, and experiments.
+            </p>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card__top">
+              <h3 class="project-card__title">Clipchamp Video Experiments</h3>
+              <p class="project-card__meta">Video • Clipchamp</p>
+            </div>
+            <p class="project-card__text">
+              Different styles of short creative videos (effects, transitions, mood).
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal visible" id="contact" aria-labelledby="contactTitle">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title" id="contactTitle">Contact</h2>
+          <p class="section__subtitle">Email only (perfect for GitHub Pages).</p>
+        </div>
+
+        <div class="contact-simple">
+          <div class="contact-simple__card">
+            <h3 class="contact-simple__title">Write to me</h3>
+            <p class="contact-simple__text">
+              Tap the button or the email icon to send me a message.
+            </p>
+
+            <div class="contact-simple__actions">
+              <a class="btn btn--primary" href="mailto:shlenskaveronika@gmail.com?subject=Hi%20Veronika!">
+                Write to me
+              </a>
+
+              <a class="icon-btn" href="mailto:shlenskaveronika@gmail.com?subject=Hi%20Veronika!" aria-label="Email Veronika">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4 6h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z"/>
+                  <path d="m22 8-10 6L2 8"/>
+                </svg>
+              </a>
+            </div>
+
+            <p class="contact-simple__hint">
+              <span class="muted">Email:</span>
+              <a class="link" href="mailto:shlenskaveronika@gmail.com">shlenskaveronika@gmail.com</a>
+            </p>
+          </div>
+
+          <div class="contact-simple__note" aria-hidden="true">
+            <div class="scanlines"></div>
+            <div class="contact-simple__note-inner">
+              <div class="note-row"><span class="note-key">Channel</span><span class="note-val accent">Email</span></div>
+              <div class="note-row"><span class="note-key">Reply</span><span class="note-val">After school</span></div>
+              <div class="note-row"><span class="note-key">Style</span><span class="note-val">Cyber / Clean</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__text">
+        © <span id="year">2025</span> Veronika • 3D Artist
+      </p>
+      <a class="footer__top link" href="#top">Back to top ↑</a>
+    </div>
+  </footer>
 </body>
 </html>
